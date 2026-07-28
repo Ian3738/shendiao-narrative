@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>神鵰俠侶</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 氛圍背景 -->
+<div id="bg"></div>
+<div id="vignette"></div>
+<canvas id="fx"></canvas>
+
+<!-- 頂部分段進度 -->
+<div id="progress"></div>
+
+<!-- 左上 HUD -->
+<div id="hud">
+  <button id="btn-roster" class="tab">名<br>錄</button>
+</div>
+
+<!-- 旁白：直排，由右至左 -->
+<main id="stage">
+  <div id="text"></div>
+</main>
+
+<!-- 對白：半身立繪＋對話框，綁成同一列排在下方 -->
+<div id="dlg-row" class="hidden">
+  <img id="por" alt="">
+  <div id="dlg">
+    <div id="dlg-name"></div>
+    <div id="dlg-body"><span id="dlg-text"></span></div>
+  </div>
+</div>
+
+<!-- 選項 -->
+<div id="choices"></div>
+
+<!-- 推進指示 -->
+<div id="next">▼</div>
+
+<!-- 回目標題卡 -->
+<div id="chapter-card" class="overlay hidden">
+  <div class="cc-inner">
+    <div class="cc-num"></div>
+    <div class="cc-title"></div>
+  </div>
+</div>
+
+<!-- 名錄 -->
+<div id="roster" class="overlay hidden">
+  <div class="paper">
+    <div class="paper-head">人　物</div>
+    <div id="cast"></div>
+    <div class="paper-foot">
+      <span class="stat"><b>名</b> 楊過</span>
+      <span class="stat"><b>情意</b> <i id="s-qing">0</i></span>
+      <span class="stat"><b>俠名</b> <i id="s-xia">0</i></span>
+      <span class="stat" id="s-suxin-wrap"><b>玉女素心</b> <i id="s-suxin">—</i></span>
+      <button id="btn-back">返　回</button>
+    </div>
+  </div>
+</div>
+
+<!-- 卷首 -->
+<div id="title-screen" class="overlay">
+  <div class="t-name">神<br>鵰<br>俠<br>侶</div>
+  <div class="t-sub">全 十 六 回</div>
+  <button id="btn-start" class="t-btn">開　卷</button>
+  <button id="btn-fresh" class="t-btn small hidden">從頭開卷</button>
+  <div class="t-foot">原著：金庸《神鵰俠侶》　非商業改編習作</div>
+</div>
+
+<!-- 凡例 -->
+<div id="preface" class="overlay hidden">
+  <div id="preface-cols"></div>
+  <button id="btn-open" class="t-btn outlined">入　古　墓</button>
+</div>
+
+<script src="ink.js"></script>
+<script src="story.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
